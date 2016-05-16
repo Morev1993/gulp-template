@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'PFDinDisplayPro-Light';
+  src: url('../fonts/PFDinDisplayPro/PFDinDisplayPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinDisplayPro-Bold';
+  src: url('../fonts/PFDinDisplayPro/PFDinDisplayPro-Bold.ttf') format('truetype'), url('../fonts/PTSansBold/PTS75F_W.svg#PTSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFDinDisplayPro-Black';
+  src: url('../fonts/PTSansItalic/PTS56F_W.eot'), url('../fonts/PTSansItalic/PTS56F_W.eot?#iefix') format('embedded-opentype'), url('../fonts/PTSansItalic/PTS56F_W.woff') format('woff'), url('../fonts/PTSansItalic/PTS56F_W.ttf') format('truetype'), url('../fonts/PTSansItalic/PTS56F_W.svg#PTSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../fonts/CenturyGothicRegular/CenturyGothicRegular.eot'), url('../fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/CenturyGothicRegular/CenturyGothic.woff') format('woff'), url('../fonts/CenturyGothicRegular/CenturyGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.ffbasetext {
+  font-family: "PFDinDisplayPro-Light", Arial, sans-serif;
+}
+.ffheadings {
+  font-family: "PFDinDisplayPro-Bold", Arial, sans-serif;
+}
+.ffitalic {
+  font-family: "PTSansItalic", Arial, sans-serif;
+}
+/*36*/
+/*30*/
+/*24*/
+/*18*/
+/*14*/
+/*12*/
+/*11*/
+/*10*/
+.f-XXL {
+  font-size: 3.6rem;
+  line-height: 5.14285714rem;
+}
+.f-XL {
+  font-size: 3rem;
+  line-height: 4.28571429rem;
+}
+.f-L {
+  font-size: 2.4rem;
+  line-height: 3.42857143rem;
+}
+.f-M {
+  font-size: 1.8rem;
+  line-height: 2.57142857rem;
+}
+.f-N {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.f-S {
+  font-size: 1.2rem;
+  line-height: 1.71428571rem;
+}
+.f-XS {
+  font-size: 1.1rem;
+  line-height: 1.57142857rem;
+}
+.f-XXS {
+  font-size: 1rem;
+  line-height: 1.42857143rem;
+}
+.f-base {
+  font-size: 16px;
+  line-height: 1.42857143;
+}
+.f-reset {
+  margin: 0;
+  padding: 0;
+}
+/* text transformations for individual cases */
+.f-i {
+  font-style: italic;
+}
+.f-b {
+  font-weight: bold;
+}
+.f-UC {
+  text-transform: uppercase;
+}
+.f-lc {
+  text-transform: lowercase;
+}
+.f-Cp {
+  text-transform: capitalize;
+}
+.t-C {
+  text-align: center;
+}
+.t-R {
+  text-align: right;
+}
+.t-L {
+  text-align: left;
+}
+.t-J {
+  text-align: justify;
+  word-spacing: -0.08em;
+}
+.nobr {
+  white-space: nowrap;
+}
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: "PFDinDisplayPro-Bold", Arial, sans-serif;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 4.28571429rem;
+  font-family: "PFDinDisplayPro-Bold", Arial, sans-serif;
+  font-weight: bold;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  font-family: "PFDinDisplayPro-Light", Arial, sans-serif;
+  overflow-x: hidden;
+  background: url("../img/pattern-b.png");
+}
+small {
+  font-size: 1.1rem;
+  line-height: 1.57142857rem;
+  text-transform: uppercase;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+header {
+  padding-top: 5rem;
+  height: 100vh;
+  background-size: cover;
+}
+header .head-pic {
+  position: relative;
+  top: -64px;
+  z-index: -1;
+}
+header .right-dec {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 260px;
+  top: 50%;
+  margin-top: -139px;
+  text-align: left;
+}
+header .right-dec .head {
+  position: absolute;
+  font-weight: bold;
+}
+header .right-dec .head_1 {
+  top: 0;
+  left: 0;
+}
+header .right-dec .head_2 {
+  top: 0;
+  right: 0;
+}
+header .right-dec .head_3 {
+  bottom: 0;
+  left: 0;
+}
+header .right-dec .head_4 {
+  bottom: 0;
+  right: 0;
+}
+header .right-dec small {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+header .heading {
+  position: relative;
+  top: -363px;
+}
+header .heading h1 {
+  color: #fff;
+  font-size: 3.6rem;
+  line-height: 5.14285714rem;
+}
+header .heading h1 .idea {
+  background: #455134;
+}
+header .bottom-content {
+  position: relative;
+  top: -212px;
+}
+header .bottom-content .platforma img {
+  height: 41px;
+}
+header .bottom-content .info {
+  margin-top: -10px;
+}
+header .bottom-content .idea-brand img {
+  height: 32px;
+}
+section {
+  height: 100vh;
+}
