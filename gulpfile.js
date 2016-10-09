@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     gls = require('gulp-live-server'),
-    jade = require('gulp-jade');
+    pug = require('gulp-pug');
 
 //server
 gulp.task('server', function() {
@@ -39,9 +39,9 @@ gulp.task('less', function() {
 });
 
 
-gulp.task('jade', function(){
-  gulp.src('./app/jade/*.jade')
-    .pipe(jade({
+gulp.task('pug', function(){
+  gulp.src('./app/pug/*.pug')
+    .pipe(pug({
         pretty: true
     })).on("error", console.log)
     .pipe(gulp.dest('./app'))
@@ -52,10 +52,10 @@ gulp.task('jade', function(){
 //watch
 gulp.task('watch', function() {
     gulp.watch('./app/less/*.less', ['less']);
-    gulp.watch('./app/jade/*.jade', ['jade']);
-    gulp.watch('./app/jade/inc/*.jade', ['jade']);
-    gulp.watch('./app/jade/mixins/*.jade', ['jade']);
+    gulp.watch('./app/pug/*.pug', ['pug']);
+    gulp.watch('./app/pug/inc/*.pug', ['pug']);
+    gulp.watch('./app/pug/mixins/*.pug', ['pug']);
 });
 
 //default
-gulp.task('default', ['server', 'html', 'less', 'jade', 'watch']);
+gulp.task('default', ['server', 'html', 'less', 'pug', 'watch']);
