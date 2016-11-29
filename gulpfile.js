@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
   less = require('gulp-less'),
+  sass = require('gulp-sass'),
   livereload = require('gulp-livereload'),
   watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -38,6 +39,18 @@ gulp.task('less', function() {
     .pipe(livereload());
 });
 
+//sass
+gulp.task('sass', function() {
+  gulp.src('./app/scss/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 15 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest('./app/css'))
+    .pipe(livereload());
+});
+
 
 gulp.task('pug', function(){
   gulp.src('./app/pug/*.pug')
@@ -51,11 +64,11 @@ gulp.task('pug', function(){
 
 //watch
 gulp.task('watch', function() {
-    gulp.watch('./app/less/*.less', ['less']);
+    gulp.watch('./app/scss/*.scss', ['sass']);
     gulp.watch('./app/pug/*.pug', ['pug']);
     gulp.watch('./app/pug/inc/*.pug', ['pug']);
     gulp.watch('./app/pug/mixins/*.pug', ['pug']);
 });
 
 //default
-gulp.task('default', ['server', 'html', 'less', 'pug', 'watch']);
+gulp.task('default', ['server', 'html', 'sass', 'pug', 'watch']);

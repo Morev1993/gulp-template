@@ -1,13 +1,13 @@
 /* bootstrap */
-@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "../bower_components/bootstrap/scss/bootstrap.scss";
 @import "../vendor/owl.carousel/assets/owl.carousel.css";
 
 /* */
 
 
-@import "fonts.less";
-@import "colors.less";
-@import "mixins.less";
+@import "fonts";
+@import "colors";
+@import "mixins";
 
 h1, h2, h3, h5, h6 {
 	margin-top: 0;
@@ -15,11 +15,11 @@ h1, h2, h3, h5, h6 {
 
 body {
 	padding: 0;
-	.ffbasetext;
-	.f-base;
+	@extend .ffbasetext;
+	@extend .f-base;
 }
 
-@offset: 5rem;
+$offset: 5rem;
 
 a, button {
 	&:focus, &:hover {
@@ -72,11 +72,11 @@ header {
 }
 
 .about, .services {
-	padding-top: @offset;
+	padding-top: $offset;
 }
 
 .important {
-	.f-L;
+	@extend .f-L;
 	margin-bottom: 3rem;
 }
 
@@ -98,13 +98,13 @@ header {
 			margin: auto;
 			margin-bottom: 2rem;
 		}
-		.t-C;
+		@extend .t-C;
 	}
 }
 
 footer {
-	padding-top: @offset;
-	background: @dark;
+	padding-top: $offset;
+	background: $dark;
 	color: #fff;
 	.contacts {
 		margin-bottom: 4rem;
@@ -112,4 +112,4 @@ footer {
 }
 
 
-@import "media.less";
+@import "media";

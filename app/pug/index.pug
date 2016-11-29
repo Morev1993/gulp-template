@@ -3,4 +3,44 @@ html(lang="en")
   include ./inc/head.pug
   body
     include ./inc/header.pug
+    section.header
+      .owl-carousel.header-slider
+        .item(style="background: url('http://placehold.it/1920x1080') 50% 50% no-repeat;")
+        .item(style="background: url('http://placehold.it/1920x1080') 50% 50% no-repeat;")
+      //-form
+        +input("text","order", "@", "order")
+        +submit("let me know")
+    .section.about
+      .container
+        h2.t-C About us
+        p.important B2BCARD offers comprehensive payment card processing services to banks and other financial institutions. 
+        p Our team has been in the payment industry since 2009 and has developed a solid base of practical knowledge. We unite professionals with considerable experience across payment cards, payment technologies and systems, e-commerce and banking that allows us to deliver entirely bespoke services to every our customer.
+        p.m-b-3 If you are interested in card issuing or internet acquiring, we are the ones who can professionally assist you. 
+        .row.m-b-5
+          .col-sm-6
+            p With us you can rapidly and with no unnecessary delays launch and develop your own card issuing and acquiring business at a professional level. No need for significant investments, dedicated staff, and maintenance. With us you can entirely focus on your business development and profit gain.
+            p Our state-of-the-art systems are based on technologies provided by one of the world leaders in banking software in combination with our own know-hows and products.
+            p Our sophisticated fault-tolerant architecture of two processing centres with a constant data replication utilizes the most advanced equipment and ensures the tiniest annual downtown time in any possible critical situation.
+            div
+              button.btn.btn-success get
+          .col-sm-6
+            img(src="http://placehold.it/600x400" class="img-responsive")
+    .decor-line
+      .container
+        p Lose away off why half led have near bed. At engage simple father of period others except. My giving do summer of though narrow marked at.
+    section.services
+      .container
+        .row.items-group
+          .col-sm-4.item
+            img(src="http://placehold.it/70x70" class="img-responsive thumb")
+            h4 Cards issuing
+            p Issuance of unlimited number of multiple card types.
+          .col-sm-4.item
+            img(src="http://placehold.it/70x70" class="img-responsive thumb")
+            h4 E-commerce acquiring
+            p Infinite number of online transactions through a safe and highly protected Internet gateway.
+          .col-sm-4.item
+            img(src="http://placehold.it/70x70" class="img-responsive thumb")
+            h4 Efficient outsourcing
+            p 24/7 technical support and customer service. Offline and Online Automated Banking System.
     include ./inc/footer.pug
