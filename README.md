@@ -1,6 +1,6 @@
 # Gulp-template
 
-less, pug, livereload
+less, scss, pug, livereload
 
 npm install
 bower install
