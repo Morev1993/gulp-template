@@ -1,64 +1,47 @@
 'use-strict'
 
 var gulp = require('gulp'),
-  less = require('gulp-less'),
-  sass = require('gulp-sass'),
-  livereload = require('gulp-livereload'),
-  watch = require('gulp-watch'),
+    sass = require('gulp-sass'),
+    watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
-    gls = require('gulp-live-server'),
+    connect = require('gulp-connect');
     pug = require('gulp-pug');
 
 //server
 gulp.task('server', function() {
-
-  var server = gls.static('app', 8888);
-  server.start();
-
-  gulp.watch(['./app/css/*.css', './app/*.html'], function (file) {
-    server.notify.apply(server, [file]);
-  });
- 
+    connect.server({
+      root: 'app',
+      port: 8888,
+      livereload: true
+    });
 });
 
 //html
 gulp.task('html', function() {
   gulp.src('./app/*.html')
-  .pipe(livereload());
+  .pipe(connect.reload());
 });
 
 //less
-gulp.task('less', function() {
-  gulp.src('./app/less/main.less')
-    .pipe(less())
-    .pipe(autoprefixer({
-        browsers: ['last 15 versions'],
-        cascade: false
-    }))
-    .pipe(gulp.dest('./app/css'))
-    .pipe(livereload());
-});
-
-//sass
 gulp.task('sass', function() {
-  gulp.src('./app/scss/main.scss')
+    gulp.src('./app/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 15 versions'],
         cascade: false
     }))
     .pipe(gulp.dest('./app/css'))
-    .pipe(livereload());
+    .pipe(connect.reload());
 });
 
 
 gulp.task('pug', function(){
-  gulp.src('./app/pug/*.pug')
-    .pipe(pug({
-        pretty: true
-    })).on("error", console.log)
-    .pipe(gulp.dest('./app'))
-    .pipe(livereload());
+    gulp.src('./app/pug/*.pug')
+        .pipe(pug({
+            pretty: true
+        })).on("error", console.log)
+        .pipe(gulp.dest('./app'))
+        .pipe(connect.reload());
 });
 
 
@@ -71,4 +54,4 @@ gulp.task('watch', function() {
 });
 
 //default
-gulp.task('default', ['server', 'html', 'sass', 'pug', 'watch']);
+gulp.task('default', ['server', 'html', 'sass', 'watch']);
